@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECT-4/Sign in</title>
+    <link rel="stylesheet" href="http://localhost:3000/REGISTER.css">
+</head>
+
+<body>
+    <div class="back"> 
+
+        <div class= "header">
+            <div class= "bgBox"></div>
+            <img src="\Images\Logo.png" class="icon"> <!-- "Logo.png" is NOT my own work, it was taken from google images-->
+            <h1>WELCOME TO CONNECT 4!</h1>
+            
+        </div>
+        
+        
+        <div class= "loginBox"> <!--The box which will contain all the inputs and formatting-->
+
+            <div class="toggleBox"> <!--The toggle between login and sign up-->
+                <div id="btn"></div>
+                <button type="button" class="toggleSwitch">SIGNUP</button>
+            </div>
+        <!--The following separates the login form and signup form-->
+            <form id="login" class="inputs" method="POST" action="/login/signup" autocomplete="off" > 
+                <input for="username" id="username" name ="username" type="text" class="inputBox" placeholder="Enter Your Username" >
+                <input for="email" id="email" name ="email" type="text" class="inputBox" placeholder="Enter Your Email" >
+                <input for="password" id="password" name = "password" type="password" class="inputBox" placeholder="Enter Your Password" >
+                <input type="submit" class= "inputBox" value="REGISTER" onsubmit="submit()">
+            </form>
+        </div>
+    </div>
+    
+    <!-- <script>
+        var log = document.getElementById("login");
+        var sign = document.getElementById("signUp");
+        var btn = document.getElementById("btn");
+
+        function submit(event) {
+            console.log("sadasdd");
+            event.preventDefault(); // without this the regular HTML form submission will still execute
+            const loginForm = document.getElementById("login");
+            fetch("localhost:2200/login/signup", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                username: document.getElementById('username').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+                })
+            });
+            console.log("sadasdd");
+        }                                
+    </script>
+ -->
+
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+.back{
+    height: 100%;
+    width: 100%;
+    min-width: 1500px;
+    min-height: 725px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0, 0, 0, 0.692)),url(Images/popoo.jpg);
+    background-color: rgb(0, 195, 255);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+#container {
+    background-color: black;
+    opacity: 80%;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    position: relative;
+    min-height: 80%;
+    max-height: 80%;
+    overflow : auto;    
+
+}
+#text-wrapper {
+    position: absolute;
+    color: rebeccapurple;
+    width: 80%;
+    top: 90%;
+    left: 10%;
+    
+    
+}
+#textfield {
+    position: relative;
+    font-family: "oswald";
+    color: black;
+    font-size: 200%;
+    height: 40%;
+    top: 40%;
+    width: 100%;
+    background-color: white;
+    border-style: none;
+    outline: none;
+    opacity: 85%;
+    max-height: 40%;
+    overflow-y: scroll;
+
+}
+
+.test { 
+    top: 0%;
+    color: white;
+    background-color: rgb(83, 83, 83);
+    border-bottom: 5%;
+    position: relative;
+    font-size: 140%;
+    font-family: "oswald";
+    font-variant-caps: all-small-caps;
+    padding-left: 1%;
+    padding-right:1% ;
+    bottom: 5%;
+
+
+}
+/* .textField { 
+    background-color: white;
+    width: 80%;
+    margin-left: 10%;
+    opacity: 100%;
+}
+.text-wrapper { 
+    background-color: white;
+    border-style: none;
+    width: 100%;
+    outline: none;
+    font-size: 200%;
+    opacity: 100%;
+} */

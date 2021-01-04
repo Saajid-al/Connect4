@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECT-4/games</title>
+    <link rel="stylesheet" href="http://localhost:3000/mainPageTestStyle.css">
+    
+    <script defer src="http://localhost:2000/socket.io/socket.io.js"></script>
+    <script defer src="http://localhost:3000/game.js"></script>
+</head>
+
+<body>
+    <div class="back">
+
+        <div class="header">
+            <div id="mainTitle">
+                <h1>CONNECT 4</h1>
+            </div>
+        
+            <div class="menuBox">
+                <div class = "dropdown">
+                    <button>MENU </button>
+                    <div>
+                        <a onclick="openprofile()">PROFILE</a>
+                        <a href="#">SETTINGS</a>
+                        <a onclick="logouts()">LOGOUT</a>
+                        <a href="#"">FRIENDS</a>
+                        <a onclick="openchat()">CHAT</a>
+                
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="body">
+            <div class="fillBox">
+                <button type="button" class="newGameBtn">New Game</button>
+                <!-- For each game, i need to kep track of whos turn it is and change the color of
+                the box on the left so that the player can see which of their in progress games they
+                have the next turn. this can be done by using js to add "redTurn" or "yellow turn"
+                to the classlist of gameNum 1 for example and then the css will turn it red-->
+                <div class="gameID" id = 'num0'>
+                    <h1>Game 0</h1>
+                    <span id="displayColor">Yellow</span>
+                </div>
+        
+            </div>
+
+
+            <!--Here we have the gameboard itself, Not sure if theres a better way to do it but I assumed a div was needed for each slot in the gameboard-->
+            <div class="gameBox">
+
+                <!--For now we will just display player 1 or 2, but eventually it will display the username of the player-->
+                <h1 class = "currentPerson">CURRENT PLAYER: PLAYER <span id="currentPlayer">1</span></h1>
+                <h2 id="outcome"></h2>
+                <div class="gameBoard">
+                    <!--Going from top to bottom-->
+                    <div class="slot row-0 col-0" id = "lefttop"></div>
+                    <div class="slot row-0 col-1"></div>
+                    <div class="slot row-0 col-2"></div>
+                    <div class="slot row-0 col-3"></div>
+                    <div class="slot row-0 col-4"></div>
+                    <div class="slot row-0 col-5"></div>
+                    <div class="slot row-0 col-6" id = "righttop"></div>
+                    <div class="slot row-1 col-0"></div>
+                    <div class="slot row-1 col-1"></div>
+                    <div class="slot row-1 col-2"></div>
+                    <div class="slot row-1 col-3"></div>
+                    <div class="slot row-1 col-4"></div>
+                    <div class="slot row-1 col-5"></div>
+                    <div class="slot row-1 col-6"></div>
+                    <div class="slot row-2 col-0"></div>
+                    <div class="slot row-2 col-1"></div>
+                    <div class="slot row-2 col-2"></div>
+                    <div class="slot row-2 col-3"></div>
+                    <div class="slot row-2 col-4"></div>
+                    <div class="slot row-2 col-5"></div>
+                    <div class="slot row-2 col-6"></div>
+                    <div class="slot row-3 col-0"></div>
+                    <div class="slot row-3 col-1"></div>
+                    <div class="slot row-3 col-2"></div>
+                    <div class="slot row-3 col-3"></div>
+                    <div class="slot row-3 col-4"></div>
+                    <div class="slot row-3 col-5"></div>
+                    <div class="slot row-3 col-6"></div>
+                    <div class="slot row-4 col-0"></div>
+                    <div class="slot row-4 col-1"></div>
+                    <div class="slot row-4 col-2"></div>
+                    <div class="slot row-4 col-3"></div>
+                    <div class="slot row-4 col-4"></div>
+                    <div class="slot row-4 col-5"></div>
+                    <div class="slot row-4 col-6"></div>
+                    <div class="slot row-5 col-0"></div>
+                    <div class="slot row-5 col-1"></div>
+                    <div class="slot row-5 col-2r"></div>
+                    <div class="slot row-5 col-3"></div>
+                    <div class="slot row-5 col-4"></div>
+                    <div class="slot row-5 col-5"></div>
+                    <div class="slot row-5 col-6"></div>
+
+                  </div>
+                <div class="resetBox">
+                    <button id="resetButton">RESET</button>
+                    <button id="forfitButton">FORFIT</button>
+                  </div>  
+            </div>
+            
+            <div id = "message-box"> <!--container-->
+                <form id = "inputBox">
+                    <input id = "inputChat" type = "text">
+                </form>
+            </div>
+            
+        </div>
+        
+    
+        
+    </div>
+
+</body>
+</html>
+
+<script>
+    function openchat() {
+        location.replace("play/chat")
+        }
+    function openprofile() {
+        location.replace("play/profile")
+    }
+    function logouts() {
+        location.replace("login")
+        }
+</script>

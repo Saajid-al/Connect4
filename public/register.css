@@ -1,0 +1,157 @@
+
+@font-face { 
+    src: url(Extras/Oswald-SemiBold.ttf);
+    font-family: oswald;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: oswald;
+}
+
+/*Making the background look aesthetic through darkening with a gradient*/
+.back{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(189, 45, 45),rgb(129, 31, 31)),url(Images/loginPage.jpg);
+    background-image: linear-gradient(rgba(9, 123, 158),rgb(12, 156, 200)),url(Images/loginPage.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+/*The header is a box to contain the icon and Welcome text and positions them correctly*/
+.header{
+    width: 100%;
+    height: 15%;
+    top: 0%;
+    left: 0%;
+    position: relative;
+    text-align: center;
+    color: rgb(216, 210, 210);
+    padding-top: 2%;
+}
+
+/*This background box only exists to hide the header box so the image and text appears to be floating*/
+.bgBox{
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+    opacity: 0%;
+    position: absolute;
+}
+
+
+/*Sizing the connect 4 logo*/
+.icon{
+    width: 13%;
+    height: 99%;
+    left: 0%;
+    position: relative;
+}
+
+/*Formatting of the mian box which holds all the inputs*/
+.loginBox{
+    overflow-x: hidden;
+    border: none;
+    opacity: 85%;
+    width: 375px;
+    height: 430px;
+    background-color:white;
+    position: relative;
+    margin: 5% auto;
+    transform: translate(0, 10px);
+    box-sizing: border-box;
+    padding: 5px;
+    
+}
+
+/*The formatting of the container for the toggle switch*/
+.toggleBox{
+    width: 224px;
+    margin: 50px auto;
+    Position: relative;
+    box-shadow: 0 0 20px 12px lightgray;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+.toggleSwitch{
+    cursor: pointer;
+    padding: 10px 34px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+/*The formatting of the toggle button itself*/
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right, red,yellow);
+    
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+
+/*Spacing of the input fields*/
+.inputs{
+    border: 0;
+    top: 180px;
+    width: 280px;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.inputBox{
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px;
+    width: 91%;
+    background-color: rgb(211, 214, 218);
+    transition: 600ms;
+}
+
+/*Positioning the login form and the sign up form so that the toggle switch works properly*/
+#login{
+   left: 50px;
+   top: 150px;
+}
+
+#signUp{
+    left: 450px;
+    top: 150px;
+ }
+
+
+/*Dealing with the night highlighting of the login and sigup buttons*/
+.loginBox input[type="submit"]{
+    width: 98.4%;
+    border: none;
+    background: linear-gradient(to right, red,yellow);
+    font-size: 15px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 12px lightgray;
+    margin-top: 10px;
+}
+
+.loginBox input[type="submit"]:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, yellow,red);
+}
+
+ 
+
+
+
+

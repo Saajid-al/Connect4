@@ -1,0 +1,36 @@
+@font-face { 
+    src: url(Extras/Oswald-SemiBold.ttf);
+    font-family: oswald;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: oswald;
+}
+
+/*Making the background look aesthetic through darkening with a gradient*/
+.bg{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(189, 45, 45),rgb(129, 31, 31));
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-color: rgb(189, 45, 45);
+
+}
+.Label { 
+    color: black;
+    font-family: oswald;
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    display: inline;
+    font-size: 180%;
+}
+.sorry { 
+    color: white;
+    position: relative;
+    font-size: 500%;
+}

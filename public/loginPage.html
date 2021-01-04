@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECT-4/Sign in</title>
+    <link rel="stylesheet" href="http://localhost:3000/loginPageStyle.css">
+</head>
+
+<body>
+    <div class="back"> 
+
+        <div class= "header">
+            <div class= "bgBox"></div>
+            <img src="\Images\Logo.png" class="icon"> <!-- "Logo.png" is NOT my own work, it was taken from google images-->
+            <h1>WELCOME TO CONNECT 4!</h1>
+            
+        </div>
+        <div class= "loginBox"> <!--The box which will contain all the inputs and formatting-->
+
+            <div class="toggleBox"> <!--The toggle between login and sign up-->
+                <div id="btn"></div>
+                <button type="button" class="toggleSwitch" onclick="loadSignin()">Login</button>
+                
+                <button type="button" class="toggleSwitch" onclick="loadRegister()">Sign Up</button>
+            </div>
+        <!--The following separates the login form and signup form-->
+            <form id="login" class="inputs" method="POST" action="/login" autocomplete="off" onSubmit="signin()"> 
+            <!-- <form id="login" class="inputs" autocomplete="off" onSubmit="signin()"> -->
+                <input for="username" id="username" name ="username" type="text" class="inputBox" placeholder="Enter Your Username" >
+                <input for="password" id="password" name = "password" type="password" class="inputBox" placeholder="Enter Your Password" >
+                <input type="submit" class= "inputBox" value="LOGIN" >
+            </form>
+        </div>
+    </div>
+
+    <!--The functions which will allow the toggle to swap which form is visible-->
+    <script>
+        function loadRegister() {
+        location.replace("login/signup")
+        }
+        function loadSignin(){ 
+        location.replace("play")
+        }
+        // async function signin() {
+        //     await fetch("http://localhost:2200/login", {method: 'POST', headers: {'Content-Type': 'application/json'}, 
+        //     body: JSON.stringify({username: document.getElementById('username'), password: document.getElementById('password')})})
+        //         .then((res) => res.json())
+        //         .then((body) => localStorage.setItem('token', body))
+        //     location.href = 'http://localhost:2200/play';
+        // }
+        var log = document.getElementById("login");
+        var sign = document.getElementById("signUp");
+        var btn = document.getElementById("btn");
+
+        function signUp(){
+            log.style.left = "-400px";
+            sign.style.left = "50px";
+            btn.style.left = "110px";
+        }
+        function login(){
+            log.style.left = "50px";
+            sign.style.left = "450px";
+            btn.style.left = "0px";
+        }
+    </script>
+
+
+    
+
+    
+</body>
+</html>
